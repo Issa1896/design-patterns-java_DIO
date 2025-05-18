@@ -1,0 +1,18 @@
+package com.designpatterns.gof.creational.abstractfactory;
+
+/**
+ * Implementação concreta de Button para o tema escuro
+ */
+public class DarkButton implements Button {
+    
+    @Override
+    public void render(String label) {
+        System.out.println("Renderizando botão com tema ESCURO: [" + label + "]");
+        System.out.println("Características: Fundo preto, texto branco, borda cinza escuro");
+    }
+    
+    @Override
+    public void onClick() {
+        System.out.println("Efeito de clique do botão com tema ESCURO: Glow azul neon");
+    }
+}

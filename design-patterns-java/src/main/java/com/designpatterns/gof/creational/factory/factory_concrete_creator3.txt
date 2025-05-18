@@ -1,0 +1,20 @@
+package com.designpatterns.gof.creational.factory;
+
+/**
+ * Implementação concreta da fábrica para pagamentos via PIX
+ */
+public class PixPaymentFactory implements PaymentFactory {
+    
+    private String pixKey;
+    private String pixKeyType;
+    
+    public PixPaymentFactory(String pixKey, String pixKeyType) {
+        this.pixKey = pixKey;
+        this.pixKeyType = pixKeyType;
+    }
+
+    @Override
+    public Payment createPayment(double amount) {
+        return new PixPayment(pixKey, pixKeyType);
+    }
+}
